@@ -634,6 +634,8 @@ const page: React.FC = () => {
   if (!Platform.isTV) {
     return (
       <FlashList
+        contentInsetAdjustmentBehavior='never'
+        estimatedItemSize={260}
         ListEmptyComponent={
           <View className='flex flex-col items-center justify-center h-full'>
             <Text className='font-bold text-xl text-neutral-500'>
@@ -648,7 +650,6 @@ const page: React.FC = () => {
           sortBy,
           sortOrder,
         ]}
-        contentInsetAdjustmentBehavior='automatic'
         data={flatData}
         renderItem={renderItem}
         keyExtractor={keyExtractor}

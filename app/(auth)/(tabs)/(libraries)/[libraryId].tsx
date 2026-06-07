@@ -876,7 +876,8 @@ const Page = () => {
             </Text>
           </View>
         }
-        contentInsetAdjustmentBehavior='automatic'
+        contentInsetAdjustmentBehavior='never'
+        estimatedItemSize={260}
         data={flatData}
         renderItem={renderItem}
         extraData={[orientation, nrOfCols]}

@@ -81,7 +81,8 @@ export const Libraries: React.FC = () => {
   return (
     <FlashList
       extraData={settings}
-      contentInsetAdjustmentBehavior='automatic'
+      contentInsetAdjustmentBehavior='never'
+      estimatedItemSize={200}
       contentContainerStyle={{
         paddingTop: Platform.OS === "android" ? 17 : 0,
         paddingHorizontal: settings?.libraryOptions?.display === "row" ? 0 : 17,
